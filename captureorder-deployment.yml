@@ -22,4 +22,5 @@ spec:
         env:
         - name: MONGOHOST
           value: "mongodb://mongodb-mongodb.default.svc.cluster.local"
-        
+        - name: RABBITMQ
+          value: "amqp://queenly-frog-rabbitmq.default.svc.cluster.local:5672"
