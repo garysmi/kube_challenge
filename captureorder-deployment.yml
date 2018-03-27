@@ -5,7 +5,7 @@ metadata:
   labels:
     app: captureOrder
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: captureOrder
@@ -22,5 +22,5 @@ spec:
         env:
         - name: MONGOHOST
           value: "mongodb://mongodb-mongodb.default.svc.cluster.local"
-        - name: RABBITMQ
+        - name: RABBITMQHOST
           value: "amqp://user:4pQDaeKoo7@queenly-frog-rabbitmq.default.svc.cluster.local:5672"

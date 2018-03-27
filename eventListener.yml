@@ -5,7 +5,7 @@ metadata:
   labels:
     app: eventListener
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: eventListener
@@ -15,8 +15,8 @@ spec:
         app: eventListener
     spec:
       containers:
-      - name: captureorder
-        image: shanepeckham/rabbitmqlistenerack:latest
+      - name: eventlistener
+        image: shanepeckham/rabbitmqlistenerack:v8
         ports:
         - containerPort: 8080
         env:

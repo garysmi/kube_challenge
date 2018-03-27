@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: fullfillorder
-        image: shanepeckham/fullfillorderack
-        volumneMounts:
+        image: shanepeckham/fulfillorderack:v8
+        volumeMounts:
         - mountPath: /order
           name: order-volume
         ports:
