@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: captureorder-deployment
+  labels:
+    app: captureOrder
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: captureOrder
+  template:
+    metadata:
+      labels:
+        app: captureOrder
+    spec:
+      containers:
+      - name: captureorder
+        image: shanepeckham/captureorderack:v8
+        ports:
+        - containerPort: 8080
