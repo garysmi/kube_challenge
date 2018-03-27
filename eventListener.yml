@@ -1,0 +1,32 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: event-listener
+  labels:
+    app: eventListener
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: eventListener
+  template:
+    metadata:
+      labels:
+        app: eventListener
+    spec:
+      containers:
+      - name: captureorder
+        image: shanepeckham/rabbitmqlistenerack:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: TEAMNAME
+          value: "team1-LDS"
+        - name: RABBITMQHOST
+          value: "amqp://user:4pQDaeKoo7@queenly-frog-rabbitmq.default.svc.cluster.local:5672"
+        - name: PARTITIONKEY
+          value: "0"
+        - name: PROCESSENDPOINT
+          value: http://fulfilorder-deployment.default.svc.cluster.local:8080/v1/order
+
+
