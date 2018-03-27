@@ -1,0 +1,34 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: fullfillorder-deployment
+  labels:
+    app: fullfillOrder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fullfillOrder
+  template:
+    metadata:
+      labels:
+        app: fullfillOrder
+    spec:
+      containers:
+      - name: fullfillorder
+        image: shanepeckham/fullfillorderack
+        volumneMounts:
+        - mountPath: /order
+          name: order-volume
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MONGOHOST
+          value: "mongodb://mongodb-mongodb.default.svc.cluster.local"
+        - name: TEAMNAME
+          value: "team1_LDS"
+      volumes:
+      - name: order-volume
+        emptyDir: {}          
+
+
