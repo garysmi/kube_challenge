@@ -5,7 +5,7 @@ metadata:
   labels:
     app: fullfillOrder
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: fullfillOrder
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: fullfillorder
-        image: shanepeckham/fulfillorderack:v8
+        image: shanepeckham/fulfillorderack:v7
         volumeMounts:
         - mountPath: /order
           name: order-volume
