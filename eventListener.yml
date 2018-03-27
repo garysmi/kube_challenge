@@ -27,6 +27,6 @@ spec:
         - name: PARTITIONKEY
           value: "0"
         - name: PROCESSENDPOINT
-          value: http://fulfilorder-deployment.default.svc.cluster.local:8080/v1/order
+          value: http://fullfillorder-deployment.default.svc.cluster.local:8080/v1/order
 
 
