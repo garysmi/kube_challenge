@@ -29,6 +29,5 @@ spec:
           value: "team1_LDS"
       volumes:
       - name: order-volume
-        emptyDir: {}          
-
-
+        persistentVolumeClaim:
+          claimName: prodpvceastus
