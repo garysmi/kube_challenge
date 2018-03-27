@@ -1,0 +1,11 @@
+  apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    name: prodpvceastus
+  spec:
+    accessModes:
+      - ReadWriteMany
+    storageClassName: prodfileeastus
+    resources:
+      requests:
+        storage: 5Gi
