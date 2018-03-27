@@ -19,3 +19,7 @@ spec:
         image: shanepeckham/captureorderack:v8
         ports:
         - containerPort: 8080
+        env:
+        - name: MONGOHOST
+        - value: "mongodb://mongodb-mongodb.default.svc.cluster.local"
+        
