@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: captureorder-deployment
   labels:
-    app: captureorder
+    app: captureOrder
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: captureorder
+      app: captureOrder
   template:
     metadata:
       labels:
-        app: captureorder
+        app: captureOrder
     spec:
       containers:
       - name: captureorder
