@@ -18,7 +18,7 @@ spec:
       - name: fullfillorder
         image: shanepeckham/fulfillorderack:v7
         volumeMounts:
-        - mountPath: /order
+        - mountPath: /orders
           name: order-volume
         ports:
         - containerPort: 8080
