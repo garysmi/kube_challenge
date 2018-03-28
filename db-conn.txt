@@ -1,1 +1,0 @@
-mongodb://team1cosmosdb-dev:eVzl7mkgzcVOAAZbmmLYzCJJzRHVRCBvE6nSffk4S3vGHq5kyLol2bozB5P0M20IE7mTHEyGNAldOoo7H94W4Q==@team1cosmosdb-dev.documents.azure.com:10255/?ssl=true&replicaSet=globaldb
