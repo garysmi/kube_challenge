@@ -23,7 +23,7 @@ spec:
         - name: TEAMNAME
           value: "team1-LDS"
         - name: PARTITIONKEY
-          value: "0"
+          value: "1"
         - name: PROCESSENDPOINT
           value: http://fullfillservice.default.svc.cluster.local:8080/v1/order
         - name: EVENTHUBPATH
