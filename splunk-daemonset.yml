@@ -29,6 +29,9 @@ spec:
         - mountPath: /var/lib/docker/containers
           readOnly: true
           name: container-logs
+        - mountPath: /var/log/pods
+          readOnly: true
+          name: var-log-pods
         - mountPath: /opt/splunk/etc/apps/splunkclouduf/default
           name: splunk-config
         - mountPath: /var/log/containers
@@ -38,6 +41,9 @@ spec:
         - name: docker-socket
           hostPath:
             path: /var/run/docker.sock
+        - name: var-log-pods
+          hostPath:
+            path: /var/log/pods/
         - name: container-logs
           hostPath:
             path: /var/lib/docker/containers
