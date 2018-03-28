@@ -1,7 +1,7 @@
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
-  name: prodfileeastus
+  name: devfileeastus
 provisioner: kubernetes.io/azure-file
 parameters:
-  storageAccount: prodstorageeastus
+  storageAccount: devstorageeastus
