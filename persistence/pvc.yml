@@ -5,7 +5,7 @@
   spec:
     accessModes:
       - ReadWriteMany
-    storageClassName: prodfileeastus
+    storageClassName: devfileeastus
     resources:
       requests:
         storage: 5Gi
