@@ -3,14 +3,17 @@ kind: DaemonSet
 metadata:
   name: splunk-forwarder-daemonset
 spec:
+  selector:
+    matchLabels:
+      name: splunk-forwarder
   template:
     metadata:
       labels:
-         app: splunk-forwarder
+        name: splunk-forwarder
     spec:
-      selector:
-        matchLabels:
-          name: splunk-forwarder
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        effect: NoSchedule
       containers:
       - name: splunkuf
         image: splunk/universalforwarder:6.5.2-monitor
