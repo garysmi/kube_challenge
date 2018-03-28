@@ -5,7 +5,7 @@ metadata:
   labels:
     app: captureOrder
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: captureOrder
@@ -25,5 +25,11 @@ spec:
             secretKeyRef:
               name: db-conn
               key: db-conn.txt
-        - name: RABBITMQHOST
-          value: "amqp://user:4pQDaeKoo7@queenly-frog-rabbitmq.default.svc.cluster.local:5672"
+        - name: TEAMNAME
+          value: team1-LDS
+        - name: EVENTPOLICYKEY
+          value: "piJrWysVVHVAaO02TJUPjaIVUP8fQhICN9exqGmKfFU="
+        - name: EVENTPOLICYNAME
+          value: eventhub-dev-policy
+        - name: EVENTURL
+          value: "https://eventhub-dev.servicebus.windows.net/eventhub-dev"

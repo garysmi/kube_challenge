@@ -1,0 +1,7 @@
+kubectl autoscale deployment captureorder-deployment --cpu-percent=50 --min=1 --max=10 
+
+
+kubectl autoscale deployment event-listener --cpu-percent=50 --min=1 --max=10 
+
+
+kubectl autoscale deployment fullfillorder-deployment --cpu-percent=50 --min=1 --max=10 
