@@ -27,6 +27,6 @@ spec:
         - name: PROCESSENDPOINT
           value: http://fullfillservice.default.svc.cluster.local:8080/v1/order
         - name: EVENTHUBPATH
-          value: "eventhub-dev"
+          value: "eventhub-prod"
         - name: EVENTHUBCONNSTRING
-          value: "Endpoint=sb://eventhub-dev.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=MU8C+sOEEnWMpLDZV7Ca1Q0G53pg9Z1cTuWTWoluT7I="
+          value: "Endpoint=sb://eventhub-prod.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=a9MrOFcPobEWuIT2GYqBQL3pZXP1dlzRbYdXj+GJpSk="

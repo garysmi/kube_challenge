@@ -33,4 +33,4 @@ spec:
       volumes:
       - name: order-volume
         persistentVolumeClaim:
-          claimName: devpvceastus
+          claimName: prodpvceastus

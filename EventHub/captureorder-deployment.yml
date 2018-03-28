@@ -28,8 +28,8 @@ spec:
         - name: TEAMNAME
           value: team1-LDS
         - name: EVENTPOLICYKEY
-          value: "piJrWysVVHVAaO02TJUPjaIVUP8fQhICN9exqGmKfFU="
+          value: "pYzKfUIAd/9oIgkY/wDVy8/qTMzGd8I8MYSMwzFt/TA="
         - name: EVENTPOLICYNAME
-          value: eventhub-dev-policy
+          value: eventhub-prod-policy
         - name: EVENTURL
-          value: "https://eventhub-dev.servicebus.windows.net/eventhub-dev"
+          value: "https://eventhub-prod.servicebus.windows.net/eventhub-prod"
