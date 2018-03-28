@@ -8,6 +8,9 @@ spec:
       labels:
          app: splunk-forwarder
     spec:
+      selector:
+        matchLabels:
+          name: splunk-forwarder
       containers:
       - name: splunkuf
         image: splunk/universalforwarder:6.5.2-monitor
