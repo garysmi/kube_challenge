@@ -16,7 +16,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: splunkuf
-        image: splunk/universalforwarder:7.0.0-monitor-k8s-logs
+        image: splunk/universalforwarder:6.5.2-monitor
         env:
         - name: SPLUNK_START_ARGS
           value: "--accept-license --answer-yes"
