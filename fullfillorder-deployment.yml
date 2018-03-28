@@ -24,7 +24,10 @@ spec:
         - containerPort: 8080
         env:
         - name: MONGOHOST
-          value: "mongodb://mongodb-mongodb.default.svc.cluster.local"
+          valueFrom:
+            secretKeyRef:
+              name: db-conn
+              key: db-conn.txt
         - name: TEAMNAME
           value: "team1_LDS"
       volumes:
