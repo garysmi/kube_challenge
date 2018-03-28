@@ -16,17 +16,17 @@ spec:
     spec:
       containers:
       - name: eventlistener
-        image: shanepeckham/rabbitmqlistenerack:v8
+        image: shanepeckham/eventhublistenerack:v8
         ports:
         - containerPort: 8080
         env:
         - name: TEAMNAME
           value: "team1-LDS"
-        - name: RABBITMQHOST
-          value: "amqp://user:XIQCbaHGKS@billowing-aardvark-rabbitmq.default.svc.cluster.local:5672"
         - name: PARTITIONKEY
           value: "0"
         - name: PROCESSENDPOINT
           value: http://fullfillservice.default.svc.cluster.local:8080/v1/order
-
-
+        - name: EVENTHUBPATH
+          value: [eventhubname]
+        - name: EVENTHUBCONNSTRING
+          value: "Endpoint=sb://[youreventhub].servicebus.windows.net/;SharedAccessKeyName=[keyname];SharedAccessKey=[key]"

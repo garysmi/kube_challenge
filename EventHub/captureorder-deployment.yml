@@ -25,5 +25,5 @@ spec:
             secretKeyRef:
               name: db-conn
               key: db-conn.txt
-        - name: RABBITMQHOST
-          value: "amqp://user:XIQCbaHGKS@billowing-aardvark-rabbitmq.default.svc.cluster.local:5672"
+        - name: EVENTHUBCONNSTRING
+          value: "Endpoint=sb://[youreventhub].servicebus.windows.net/;SharedAccessKeyName=[keyname];SharedAccessKey=[key]"
